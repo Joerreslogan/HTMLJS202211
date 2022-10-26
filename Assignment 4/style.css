@@ -1,3 +1,8 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
 #container{
     width: 1000px;
     border: 1px solid black;
@@ -36,6 +41,9 @@ footer{
     float: right;
     margin-right: 10px;
 }
+.contact{
+    list-style-type: none;
+}
 
 .nav-btn{
     margin: auto;
@@ -59,4 +67,14 @@ footer{
 .btn:hover{
     background-color: rgb(44, 44, 44);
     color: white;
+}
+
+.game-info{
+    width: 450px;
+    float: right;
+    margin-right: 10px;
+}
+
+.article-image{
+    margin-left: 3px;
 }
