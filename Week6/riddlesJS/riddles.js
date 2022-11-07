@@ -1,3 +1,3 @@
 function showAnswer(id, answer){
-    document.getElementByld().innerHTML = answer
+    document.getElementByld(id).innerHTML = answer
 }
