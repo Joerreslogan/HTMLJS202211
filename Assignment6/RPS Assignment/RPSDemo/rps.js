@@ -9,13 +9,14 @@ ctx.strokeStyle = "black";
 ctx.fillText("Welcome to the RPS Game!", 125, 280);
 ctx.strokeText("Welcome to the RPS Game!", 125, 280);
 
+
 //alert("select rock, paper, or scissors!");
 var rps = ["rock", "paper", "scissors"];
 //console.log(rps[0]);
 
-document.getElementById("rock").addEventListener('click', function (e)  {{ctx.clearRect(0, 0, 800, 600)} ctx.fillText("you picked " + rps[0], 200, 400); playGame(rps[0]) });
-document.getElementById("paper").addEventListener('click', function (e) {{ctx.clearRect(0, 0, 800, 600)} ctx.fillText("you picked " + rps[1], 200, 400); playGame(rps[1]) });
-document.getElementById("scissors").addEventListener('click', function (e) {{ctx.clearRect(0, 0, 800, 600)} ctx.fillText("you picked " + rps[2], 200, 400); playGame(rps[2]) });
+document.getElementById("rock").addEventListener('click', function (e)  {{ctx.clearRect(0, 0, 800, 600)} ctx.fillText("you picked " + rps[0], 200, 300); playGame(rps[0]) });
+document.getElementById("paper").addEventListener('click', function (e) {{ctx.clearRect(0, 0, 800, 600)} ctx.fillText("you picked " + rps[1], 200, 300); playGame(rps[1]) });
+document.getElementById("scissors").addEventListener('click', function (e) {{ctx.clearRect(0, 0, 800, 600)} ctx.fillText("you picked " + rps[2], 200, 300); playGame(rps[2]) });
 
 
 function playGame(playerChoice) {
@@ -33,6 +34,7 @@ function playGame(playerChoice) {
                 alert("cpu chose paper, you lose")
             }
             else {
+                //scissors
                 alert("cpu chose scissors, you win")
             }
 
