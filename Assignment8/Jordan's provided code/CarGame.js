@@ -3,14 +3,14 @@ var ctx = canvas.getContext("2d");
 
 var timer = requestAnimationFrame(main);
 
-var start = 50;
-var finish = 750;
+var start = 58;
+var finish = 956;
 
 //car variables
 var carPos = 2;
 var startFuel = randomNumber(canvas.width, 600);
 var fuel = startFuel;
-var fuelBarWidth = 300;
+var fuelBarWidth = 512;
 var speed = 3;
 var gameOver = true;
 var carWidth = 50;
@@ -22,7 +22,7 @@ var frames = fps;
 
 //game sprites
 var carSprite = new Image();
-carSprite.src = "images/car.png"
+carSprite.src = "images/Car.png"
 
 carSprite.onload = function(){
     main();
@@ -49,8 +49,8 @@ function main(){
     if(gameOver){
         //Main Menu Screen
         ctx.save();
-        ctx.fillStyle = "black";
-        ctx.font = "30px Arial";
+        ctx.fillStyle = "lightblue";
+        ctx.font = "30px Verdana";
         ctx.textAlign = "center";
         ctx.fillText("Press Space to Start", canvas.width/2, canvas.height/2);
         ctx.restore();
@@ -105,12 +105,12 @@ function drawCar(){
 function drawFuelBar(){
     //draw fuel bar hud
     var currentBarWidth = fuelBarWidth * (fuel/startFuel);
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "darkgrey";
     ctx.fillRect(start,30, fuelBarWidth, 10);
-    ctx.font = "25px Arial";
+    ctx.font = "25px Verdana";
     ctx.fillText("Fuel",start,25);
     if(fuel>0){
-        ctx.fillStyle = "green";
+        ctx.fillStyle = "blue";
         ctx.fillRect(start,30, currentBarWidth, 10);
     }
     
@@ -119,15 +119,15 @@ function drawFuelBar(){
 function drawResults(){
     if(carPos + carWidth > finish){
         ctx.save();
-        ctx.fillStyle = "black";
-        ctx.font = "25px Arial";
+        ctx.fillStyle = "yellow";
+        ctx.font = "35px Verdana";
         ctx.textAlign = "center";
         ctx.fillText("You made it to the finish... You win!!", canvas.width/2, canvas.height/2);
         ctx.restore();
     }else{
         ctx.save();
-        ctx.fillStyle = "black";
-        ctx.font = "25px Arial";
+        ctx.fillStyle = "darkred";
+        ctx.font = "35px Vardana";
         ctx.textAlign = "center";
         ctx.fillText("You ran out of fuel... You lose!!", canvas.width/2, canvas.height/2);
         ctx.restore();
@@ -156,14 +156,14 @@ function drawStartTimer(){
     if(seconds > 0){
         ctx.save();
         ctx.fillStyle = "black";
-        ctx.font = "30px Arial";
+        ctx.font = "30px Verdana";
         ctx.textAlign = "center";
         ctx.fillText(seconds, canvas.width/2, canvas.height/2);
         ctx.restore();
     }else{
         ctx.save();
         ctx.fillStyle = "black";
-        ctx.font = "30px Arial";
+        ctx.font = "30px Verdana";
         ctx.textAlign = "center";
         ctx.fillText("GO!", canvas.width/2, canvas.height/2);
         ctx.restore();
