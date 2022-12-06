@@ -89,7 +89,7 @@ function main(){
 
 function drawStartFinishLines(){
      //draw start line
-     ctx.fillStyle = "black";
+     ctx.fillStyle = "white";
      ctx.fillRect(start, 50, 10, 500);
      //draw finish line 
      ctx.fillRect(finish, 50, 10, 500);
