@@ -1,0 +1,19 @@
+
+#container{
+    background-color: green;
+    max-width: 1000;
+    margin: auto;
+    font-family: Verdana;
+    font-size: 14px;
+    color: white;
+}
+body{ 
+    background-image: url("Images/Background.jpg");
+    display: flex;
+    justify-content: center;
+}
+header{
+    max-width: 1000;
+    margin: auto;
+    border: 3px solid black;
+}
