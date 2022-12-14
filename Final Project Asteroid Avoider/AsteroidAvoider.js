@@ -14,8 +14,9 @@ var shipSprite = new Image();
 shipSprite.src = "Images/Rocketship.png"
 
 shipSprite.onload = function(){
-    main();
+    main()
 }
+
 //utility functions
 function randomRange(high, low){
     return Math.random() * (high-low) + low
@@ -128,8 +129,8 @@ function pressKeyUp(e){
 function PlayerShip(){
     this.x = canvas.width/2
     this.y = canvas.height/2
-    this.w = 40
-    this.h = 40
+    this.w = 45
+    this.h = 45
     this.vx = 0
     this.vy = 0
     this.up = false
@@ -153,23 +154,23 @@ function PlayerShip(){
                 ctx.fillStyle = "orange"
             }
             ctx.beginPath()
-            ctx.moveTo(0, this.flamelength)
-            ctx.lineTo(5,5)
-            ctx.lineTo(-5,5)
-            ctx.lineTo(0,this.flamelength)
+            ctx.moveTo(-20, this.flamelength)
+            ctx.lineTo(-15,-5)
+            ctx.lineTo(-30,-5)
+            ctx.lineTo(-20,this.flamelength)
             ctx.closePath()
             ctx.fill()
             ctx.restore()
 
         }
-        ctx.fillStyle = "red"
+        /*ctx.fillStyle = "red"
         ctx.beginPath()
         ctx.moveTo(0, -10)
         ctx.lineTo(10, 10)
         ctx.lineTo(-10, 10)
         ctx.lineTo(0, -10)
         ctx.closePath()
-        ctx.fill();
+        ctx.fill();*/
         ctx.drawImage(shipSprite, -this.w,-this.h, this.w,this.h);
         ctx.restore() 
     }
@@ -254,7 +255,6 @@ gameStates[1] = function(){
             main()
             
         }
-
 
         if(asteroids[i].y > canvas.height + asteroids[i].radius){
             asteroids[i].x = randomRange(canvas.width - asteroids[i].radius, asteroids[i].radius)
