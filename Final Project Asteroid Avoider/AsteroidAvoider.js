@@ -10,7 +10,12 @@ var currentState = 0
 var score = 0
 var highScore = 0
 
+var shipSprite = new Image();
+shipSprite.src = "Images/Rocketship.png"
 
+shipSprite.onload = function(){
+    main();
+}
 //utility functions
 function randomRange(high, low){
     return Math.random() * (high-low) + low
@@ -30,7 +35,7 @@ function gameStart(){
 function Asteroid(){
     this.radius = randomRange(15,2)
     this.x = randomRange(canvas.width - this.radius, this.radius)
-    this.y = randomRange(canvas.height - this.radius, this.radius) - canvas.height
+    this.y = randomRange(canvas.height - this.radius, this.radius) - canvas.width
     this.vy = randomRange(10, 5)
     this.color = "white"
 
@@ -123,8 +128,8 @@ function pressKeyUp(e){
 function PlayerShip(){
     this.x = canvas.width/2
     this.y = canvas.height/2
-    this.w = 20
-    this.h = 20
+    this.w = 40
+    this.h = 40
     this.vx = 0
     this.vy = 0
     this.up = false
@@ -165,6 +170,7 @@ function PlayerShip(){
         ctx.lineTo(0, -10)
         ctx.closePath()
         ctx.fill();
+        ctx.drawImage(shipSprite, -this.w,-this.h, this.w,this.h);
         ctx.restore() 
     }
 
@@ -219,7 +225,7 @@ gameStates[1] = function(){
     ctx.fillText("Score: " + score.toString(), canvas.width - 150, 30)
     ctx.restore()
 
-    //Vertical 
+    //Vertical Movement
     if(ship.up){
         ship.vy = -10
     }else{

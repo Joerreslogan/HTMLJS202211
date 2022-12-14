@@ -17,3 +17,14 @@ header{
     margin: auto;
     border: 3px solid black;
 }
+h1{
+    color: black;
+    margin: 3px;
+    font-family: Verdana;
+}
+p{
+    color: cyan;
+    width: 820px;
+    margin: 10px;
+    font-family: Verdana;
+}
