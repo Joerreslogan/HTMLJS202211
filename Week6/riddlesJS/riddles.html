@@ -5,43 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riddles With JavaScript</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
-
-        @font-face{
-            font-family:party;
-            src: url(fonts/PartyConfetti.ttf);
-        }
-        body{
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: orange;
-            font-family: party;
-        }
-    </style>
 </head>
 <body>
     <ul>
         <li>
             <p>what is black white and read all over?</p>
             <br>
-            <button onclick="showAnswer('answer','a news paper')">Click for answer</button>
-            <span id="answer"></span>
-            <hr>
+            <p onclick="showAnswer('answer','a news paper')" id="answer">Answer</p>
+
         </li>
         <li>
             <p>what is black white and read all over?</p>
             <br>
-            <button onclick="showAnswer('answer2','a hole')">Click for Answer</button>
-            <span id="answer2"></span>
+            <p onclick="showAnswer('answer2','a hole')" id="answer2">Answer</p>
 
         </li>
     </ul>
     <script src="riddles.js"></script>
 </body>
 </html>
-
-
-
